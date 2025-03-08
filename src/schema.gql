@@ -2,6 +2,10 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Mutation {
+  createPet(createPetInput: createPetInput!): Pet!
+}
+
 type Pet {
   id: Int!
   name: String!
@@ -10,4 +14,9 @@ type Pet {
 
 type Query {
   pets: [Pet!]!
+}
+
+input createPetInput {
+  name: String!
+  type: String
 }
